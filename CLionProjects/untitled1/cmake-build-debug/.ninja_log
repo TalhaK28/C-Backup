@@ -1,0 +1,13 @@
+# ninja log v5
+37	831	7500317843091542	CMakeFiles/untitled1.dir/Data.cpp.obj	b548ac66d93b6bc9
+5	783	7500317842600066	CMakeFiles/untitled1.dir/main.cpp.obj	48dbd3d5ee71f545
+29	807	7500317842820969	CMakeFiles/untitled1.dir/Sensor.cpp.obj	1aec3113abc1dc65
+955	1380	7500317848534978	untitled1.exe	6264338054bf6461
+19	813	7500317842900754	CMakeFiles/untitled1.dir/Server.cpp.obj	7b0e4a5bb7aa31f1
+12	954	7500317844308270	CMakeFiles/untitled1.dir/Scheduler.cpp.obj	7e1447a45a829850
+1	206	7500325576516944	build.ninja	db2f067d7ac382d0
+19	673	7500325584136633	CMakeFiles/untitled1.dir/Server.cpp.obj	7b0e4a5bb7aa31f1
+9	674	7500325584166551	CMakeFiles/untitled1.dir/main.cpp.obj	48dbd3d5ee71f545
+5	698	7500325584455751	CMakeFiles/untitled1.dir/Sensor.cpp.obj	1aec3113abc1dc65
+13	872	7500325586176445	CMakeFiles/untitled1.dir/Scheduler.cpp.obj	7e1447a45a829850
+872	1139	7500325588778062	untitled1.exe	c9c31539a25bf8ab
