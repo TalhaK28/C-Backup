@@ -1,6 +1,8 @@
 #include "Server.h"
 #include <iostream>
 #include <fstream>
+#include <string>
+#include <regex>
 
 // Constructeur par défaut
 Server::Server() {
@@ -30,16 +32,26 @@ void Server::consoleWrite(const std::string& sensorData) {
     std::cout << sensorData << std::endl;
 }
 
+
+
+std::string removeAnsiEscapes(const std::string& input) {
+    // Expression régulière qui correspond aux séquences d'échappement ANSI
+    std::regex escapeSequence(R"(\x1b\[[0-9;]*[mK])");
+
+    // Remplacer toutes les séquences d'échappement par une chaîne vide
+    return std::regex_replace(input, escapeSequence, "");
+}
+
 // Fonction pour écrire dans un fichier de log
 void Server::fileWrite(const std::string& sensorData, const std::string& sensorType) {
     if (sensorType == "Temperature") {
-        temperatureLogFile << sensorData << std::endl;
+        temperatureLogFile << removeAnsiEscapes(sensorData) << std::endl;
     } else if (sensorType == "Humidity") {
-        humidityLogFile << sensorData << std::endl;
+        humidityLogFile << removeAnsiEscapes(sensorData) << std::endl;
     } else if (sensorType == "Sound") {
-        soundLogFile << sensorData << std::endl;
+        soundLogFile << removeAnsiEscapes(sensorData) << std::endl;
     } else if (sensorType == "Light") {
-        lightLogFile << sensorData << std::endl;
+        lightLogFile << removeAnsiEscapes(sensorData) << std::endl;
     }
 }
 

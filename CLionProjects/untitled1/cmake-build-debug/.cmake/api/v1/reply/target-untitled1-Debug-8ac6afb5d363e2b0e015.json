@@ -104,7 +104,8 @@
 			[
 				2,
 				4,
-				6
+				6,
+				7
 			]
 		}
 	],
@@ -147,6 +148,11 @@
 		{
 			"backtrace" : 1,
 			"path" : "Sensor.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "ISensor.h",
 			"sourceGroupIndex" : 1
 		}
 	],

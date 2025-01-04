@@ -2,18 +2,18 @@
 #define SCHEDULER_H
 
 #include <vector>
-#include "Sensor.h"
+#include "ISensor.h" // Interface ISensor
 
 class Scheduler {
 public:
     Scheduler();
     ~Scheduler();
 
-    void addSensor(Sensor* sensor);
+    void addSensor(ISensor* sensor);
     void simulation(int duration);
 
 private:
-    std::vector<Sensor*> sensors;
+    std::vector<ISensor*> sensors;
 };
 
 #endif
